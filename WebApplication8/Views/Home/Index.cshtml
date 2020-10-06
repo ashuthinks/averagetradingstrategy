@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebApplication8.Models.StockPriceData>
+@{ ViewBag.Title = "Index";}
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th> @Html.DisplayNameFor(model => model.FirstOrDefault().stock) </th>
+        <th> @Html.DisplayNameFor(model => model.FirstOrDefault().buyprice) </th>
+        <th> @Html.DisplayNameFor(model => model.FirstOrDefault().lowstoploss) </th>
+        <th> @Html.DisplayNameFor(model => model.FirstOrDefault().shortprice) </th>
+        <th> @Html.DisplayNameFor(model => model.FirstOrDefault().highstoploss) </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(modelItem => item.stock) </td>
+            <td> @Html.DisplayFor(modelItem => item.buyprice) </td>
+            <td> @Html.DisplayFor(modelItem => item.lowstoploss) </td>
+            <td> @Html.DisplayFor(modelItem => item.shortprice) </td>
+            <td> @Html.DisplayFor(modelItem => item.highstoploss) </td>
+        </tr>
+    }
+</table>
